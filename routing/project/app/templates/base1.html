@@ -1,0 +1,24 @@
+<style>
+    #nav{
+        margin: 20px;
+        padding-top: 40px;   
+    }
+    
+    #nav li a{ 
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        gap: 10px;
+    }
+
+</style>
+
+<div style="font-size:25px; background-color: green; text-justify: auto; width: 250px; height: 500px; border-radius: 30px; ">
+<ul id="nav">
+    <li><a href="{% url 'home' %}">Home </a></li>
+    <li><a href="{% url 'about' %}">About Us </a></li>
+    <li><a href="{% url 'contact' %}">Contact US </a></li>
+    <li><a href="{% url 'search' %}">Search </a></li>
+</ul>
+
+</div>

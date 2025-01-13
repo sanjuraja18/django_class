@@ -1,1 +1,24 @@
-<h1>hello sanju this side home page</h1>
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/app/style.css' %}">
+</head>
+<body>
+    {% block content %}
+    {% comment %} <div style="width: 500px; height: 350px; background-color: pink; border-radius: 20px;"> {% endcomment %}
+        <h1 id="home">This is home page</h1>
+        <img src="{% static 'image/img1.jpg' %}" height="40%" width="40%">
+        <video src="{% static 'vidio/video.mov' %}" controls height="40%" width="40%"></video>
+        
+        </div>
+    {% endblock %}
+</body>
+</html>
+
+

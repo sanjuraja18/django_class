@@ -17,8 +17,8 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR)
 
-SANJUDIRS =os.path.join(BASE_DIR,'sanju')
-print(SANJUDIRS)
+CHAUHANDIRS =os.path.join(BASE_DIR,'sanju')
+print(CHAUHANDIRS)
 
 
 # Quick-start development settings - unsuitable for production
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [SANJUDIRS],
+        'DIRS': [CHAUHANDIRS],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

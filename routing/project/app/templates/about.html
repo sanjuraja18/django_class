@@ -1,5 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock  %} 
+
 
 {% block content %}
-<h1>hello sanju this side about page</h1>
+<h1 id="about">hello sanju this side about page</h1>
 {% endblock %}

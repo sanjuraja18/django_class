@@ -1,6 +1,11 @@
 {% extends "base.html" %}
-{% load static %}
 
+{% load static %}
+<title>
+ {% block title %}
+         About
+ {% endblock  %} 
+</title>
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock  %} 

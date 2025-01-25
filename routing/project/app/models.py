@@ -53,3 +53,17 @@ class Student(models.Model):
     stu_name=models.ForeignKey(DepartmentModel,on_delete=models.PROTECT, to_field='dep_name')
     def __str__(self):
         return str(self.stu_name)
+
+fueltype=[("petool","petool"),("EV","EV"),("CNG","CNG"),("Dezal","Dezal")]
+class fuel(models.Model):
+    fuel_name=models.CharField(max_length=100,verbose_name="name", choices=fueltype,primary_key=True)
+    def __str__(self):
+        return str(self.fuel_name)
+
+vehicalType=[("TATA","TATA"),("HONDA","HONDA"),("MARUTHI","MARUTHI"),("BMW","BMW")]
+class Vehical(models.Model):
+    car_name=models.CharField(max_length=100,verbose_name="name", choices=vehicalType, primary_key=True)
+    price=models.IntegerField()
+    fuel_name=models.ManyToManyField(fuel)
+    def __str__(self):
+        return self.car_name

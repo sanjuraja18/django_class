@@ -1,1 +1,21 @@
-{% comment %} {{data}} {% endcomment %}
+{{data}}
+{% if data %}
+   <table style="border: 2px solid black; background-color: aqua;">
+        <tr style="width: 300px;">
+            <th>S.NO</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Contact</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.stu_email}}</td>
+            <td>{{i.stu_name}}</td>
+            <td>{{i.stu_contact}}</td>
+        </tr>
+        {% endfor %}
+   </table>
+   {% else %}
+        <h1>no data found</h1>
+    {% endif%}

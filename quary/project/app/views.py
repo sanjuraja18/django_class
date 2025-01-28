@@ -27,10 +27,10 @@ def alldata(request):
     #m=Student.objects.get(stu_email='sanju')
     # print(m)
     x=Student.objects.all()
-    # data={
-    #     'data':x.values()
-    # }
-    # return render(request,'first.html',data)
+    data={
+        'data':x.values()
+    }
+    return render(request,'first.html',data)
     print(x)
 
 def filter(request):
@@ -48,3 +48,31 @@ def veluesList(request):
 def exclude(request):
     data=Student.objects.exclude(stu_name="sanju")
     print(data)
+
+def get(request):
+    data=Student.objects.get(stu_name="sanju raja")
+    print(data)
+
+def firstdata(request):
+    data=Student.objects.first()
+    print(data)
+
+    print(data.id)
+    print(data.stu_name)
+    print(data.stu_email)
+    print(data.stu_contact)
+
+def lastdata(request):
+    data=Student.objects.last()
+    print(data)
+
+def orderby(request):
+    data=Student.objects.order_by('-id')[0:3]
+    print(data)
+    # data=Student.objects.all()[0:4]
+    # print(data)
+
+
+
+
+
